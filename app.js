@@ -95,7 +95,7 @@ const fotoImg = document.querySelector(".lightbox__image");
 
 cardsList.addEventListener("click", onOpenFotoClik);
 modalCloseButton.addEventListener("click", onCloseFotoClik);
-window.addEventListener("keydown", escapePress)
+// window.addEventListener("keydown", escapePress)
 
 
 function onOpenFotoClik(e) {
@@ -106,13 +106,14 @@ function onOpenFotoClik(e) {
   lightBox.classList.add("is-open");
   fotoImg.src = e.target.dataset.source;
   fotoImg.alt = e.target.alt;
-  
+  window.addEventListener("keydown", escapePress)
 };
 
 function onCloseFotoClik() {
   lightBox.classList.remove("is-open");
   fotoImg.src = "";
   fotoImg.alt = "";
+  window.addEventListener("keydown", escapePress)
 }
 
 function escapePress(e) {
