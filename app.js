@@ -97,6 +97,7 @@ cardsList.addEventListener("click", onOpenFotoClik);
 modalCloseButton.addEventListener("click", onCloseFotoClik);
 window.addEventListener("keydown", escapePress)
 
+
 function onOpenFotoClik(e) {
   if (!e.target.classList.contains("gallery__image")) {
     return;
@@ -105,6 +106,7 @@ function onOpenFotoClik(e) {
   lightBox.classList.add("is-open");
   fotoImg.src = e.target.dataset.source;
   fotoImg.alt = e.target.alt;
+  
 };
 
 function onCloseFotoClik() {
@@ -119,10 +121,3 @@ onCloseFotoClik()
   }
 }
 
-// function arrowPress(e) {
-//    if (e.code === "ArrowLeft") {
-// onOpenFotoClik(e.nextSibling)
-//   }  else if (e.code === "ArrowRight") {
-// onOpenFotoClik(e.previousSibling)
-//     }
-// }
